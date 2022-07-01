@@ -1,3 +1,9 @@
+<?php
+$msg = '';
+require_once('process.php')
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +26,16 @@
     <div class="container pt-5 text-center">
         <img src="images/zalego.jpg" alt="" height="100">
     </div>
+    
     <div class="container p-5">
         <form action="register.php" method="POST">
+        <span class="alert alert-success">
+            <?php
+                if($msg){
+                    include ('response.php');
+                };
+            ?>
+        </span>
             <div class="row">
                 <div class="col-lg-12 mb-3">
                     <label for="username" class="form-label">Username:</label>

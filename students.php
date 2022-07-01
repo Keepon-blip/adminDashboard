@@ -14,7 +14,7 @@
 <body>
 	<!-- All our code. write here   -->
 	<div class="header">
-		<img src="images/zalego.jpg" alt="zalego" height="50" width="50" class="rounded-circle">
+		<a href="index.php"><img src="images/zalego.jpg" alt="zalego" height="50" width="50" class="rounded-circle"></a>
 	</div>
 	<div class="sidebar">
 		<nav>
@@ -48,21 +48,35 @@
 						<span>Students</span>
 					</div>
                     <div class="card-body">
-                        <table class="table">
+                        <table class="table table-striped table-hover table-dark">
                             <thead>
                                 <tr>
                                     <th scope="col">No.</th>
                                     <th scope="col">Full Name</th>
                                     <th scope="col">Phone Number</th>
                                     <th scope="col">E-mail</th>
+									<th scope="col">Gender</th>
                                     <th scope="col">Course</th>
-                                    <th scope="col">Gender</th>
+                                    <th scope="col">Enrolled on</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row"></th>
+                                    <th scope="row">1.</th>
+									<td>Keepon</td>
+									<td>12346897</td>
+									<td>sbjkvsnvnj@gmail.com</td>
+									<td>Male</td>
+									<td>Web Development</td>
+									<td>20th July 2022</td>
+									<td>
+									<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
+									<a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+									</td>
                                 </tr>
+								
                             </tbody>
                         </table>
                     </div>

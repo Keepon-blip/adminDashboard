@@ -14,7 +14,7 @@
 <body>
 	<!-- All our code. write here   -->
 	<div class="header">
-		<img src="images/zalego.jpg" alt="zalego" height="50" width="50" class="rounded-circle">
+		<a href="index.php"><img src="images/zalego.jpg" alt="zalego" height="50" width="50" class="rounded-circle"></a>
 	</div>
 	<div class="sidebar">
 		<nav>
@@ -90,8 +90,9 @@
 				</div>
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>Top content</span>
+						<span>Student Analysis</span>
 					</div>
+					<span class="fa fa-line-chart fa-3x"></span>
 				</div>
 			</div>
 		</div>
