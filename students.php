@@ -1,3 +1,16 @@
+<?php
+$server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'zalego';
+
+$conn = mysqli_connect($server,$username,$password,$database);
+
+$sql = mysqli_query($conn, "SELECT * FROM enrollment");
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +25,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<!-- All our code. write here   -->
 	<div class="header">
 		<a href="index.php"><img src="images/zalego.jpg" alt="zalego" height="50" width="50" class="rounded-circle"></a>
 	</div>
@@ -62,20 +74,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1.</th>
-									<td>Keepon</td>
-									<td>12346897</td>
-									<td>sbjkvsnvnj@gmail.com</td>
-									<td>Male</td>
-									<td>Web Development</td>
-									<td>20th July 2022</td>
+								<?php while($fetchEnrollmentRecords = mysqli_fetch_array($sql)) {?>
+									<tr>
+                                    <th scope="row"><?php echo $fetchEnrollmentRecords['no']; ?></th>
+									<td><?php echo $fetchEnrollmentRecords['fullname']; ?></td>
+									<td><?php echo $fetchEnrollmentRecords['phonenumber']; ?></td>
+									<td><?php echo $fetchEnrollmentRecords['email']; ?></td>
+									<td><?php echo $fetchEnrollmentRecords['gender']; ?></td>
+									<td><?php echo $fetchEnrollmentRecords['course']; ?></td>
+									<td><?php echo $fetchEnrollmentRecords['created_at']; ?></td>
 									<td>
 									<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
 									<a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye"></i></a>
 									<a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 									</td>
                                 </tr>
+								<?php } ?>
 								
                             </tbody>
                         </table>
