@@ -65,7 +65,6 @@
 		</div>
 	</div>
 	
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+	<?php require_once('includes/scripts.php') ?>
 </body>
 </html>

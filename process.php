@@ -1,5 +1,5 @@
 <?php
-require_once('connection.php');
+require_once('logics/connection.php');
 
 if (isset($_POST['signUp']))
 {

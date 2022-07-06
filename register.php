@@ -54,8 +54,7 @@ require_once('process.php')
             <p>Have an account? Sign in <a href="">here</a></p>
         </form>
     </div>
-	
-<script src="jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<?php require_once('includes/scripts.php') ?>
 </body>
 </html>

@@ -1,30 +1,30 @@
 <div class="sidebar">
 		<nav>
 			<ul>
-                 <li>
-					<a href="index.php">
+				<a href="index.php">
+					<li>
 						<span><i class="fa fa-home"></i></span>
 						<span>Dashboard</span>
-					</a>
-				</li>
-				<li>
-					<a href="students.php">
+					</li>
+				</a>
+				<a href="students.php">
+					<li>
 						<span><i class="fa fa-group"></i></span>
 						<span>Students</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
+					</li>
+				</a>
+				<a href="">
+					<li>
 						<span><i class="fa fa-folder-open"></i></span>
 						<span>Courses</span>
-					</a>
-				</li>
-				<li>
-					<a href="">
+					</li>
+				</a>
+				<a href="">
+					<li>
 						<span><i class="fa fa-graduation-cap"></i></span>
 						<span>Campus</span>
-					</a>
-				</li>
+					</li>
+				</a>
 			</ul>
 		</nav>
 	</div>
