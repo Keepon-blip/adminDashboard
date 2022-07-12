@@ -18,7 +18,7 @@ body {
 .sidebar {
     position: absolute;
     width: 100%;
-    background-color: #07b00d;
+    background-color: #07800d;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;
@@ -35,13 +35,15 @@ body {
     cursor: pointer;
 }
 .sidebar ul li:hover {
-    background-color: #08ca0f;
+    background-color: #099210;
 }
 
 .sidebar ul li {
     color: #ffffff;
     text-decoration: none;
 }
+
+
 
 .main-content {
     padding-top: 50px;

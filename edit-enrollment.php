@@ -1,15 +1,19 @@
 <?php
+    $message = '';
 require_once('logics/connection.php');
 
 $queryStudent = mysqli_query($conn, "SELECT * FROM enrollment WHERE no= '".$_GET['id']."' ");
 while($fetchStudent = mysqli_fetch_array($queryStudent))
 {
+    $id = $fetchStudent['no'];
     $fullName = $fetchStudent['fullname'];
     $phone = $fetchStudent['phonenumber'];
     $email = $fetchStudent['email'];
     $gender = $fetchStudent['gender'];
     $course = $fetchStudent['course'];
 }
+
+require_once('logics/process-update.php')
 
 ?>
 
@@ -29,10 +33,11 @@ while($fetchStudent = mysqli_fetch_array($queryStudent))
                     <div class="card">
                         <div class="card-header text-center bg-dark text-white">
                             <h4>Edit Student <?php echo $fullName ?></h4>
+                            <?php echo $message ?>
                         </div>
                         <div class="card-body">
                             <div class="container">
-                                <form action="enroll.php" method="POST">
+                                <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
                                     <div class="row">
                                         <div class="mb-3 col-lg-6">
                                             <label for="fullname" class="form-label" na><b>Full Name</b></label>
@@ -57,7 +62,6 @@ while($fetchStudent = mysqli_fetch_array($queryStudent))
                                             </select>
                                         </div>
                                     </div> 
-                                    <br>
                                     <div class="row">
                                         <label for="course" class="form-label"><b>Course</b></label>
                                         <select class="form-select form-control mb-3" name="course">
@@ -66,13 +70,14 @@ while($fetchStudent = mysqli_fetch_array($queryStudent))
                                             <option value="Data Science">Data Science</option>
                                             <option value="Android Development">Android Development</option>
                                             <option value="Cyber Security">Cyber Security</option>
+                                            <option value="AWS Certification">AWS Certification</option>
                                         </select>
                                     </div>
                                     <br>
-                                    <button type="submit" class="btn btn-primary" name="submitApplication">Save Changes</button>
+                                    <button type="submit" class="btn btn-primary" name="updateEnrollment">Update Records</button>
                                 </form>
                             </div>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
