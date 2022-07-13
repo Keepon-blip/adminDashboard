@@ -13,7 +13,7 @@ while($fetchStudent = mysqli_fetch_array($queryStudent))
     $course = $fetchStudent['course'];
 }
 
-require_once('logics/process-update.php')
+require_once('logics/process-update.php');
 
 ?>
 
@@ -27,10 +27,10 @@ require_once('logics/process-update.php')
 
 	<?php require_once('includes/sidebar.php') ?>
 	<div class="main-content">
-		<div class="container-fluid">
+		<div class="container p-5">
 			<div class="row">
                 <div class="col-lg-12">
-                    <div class="card">
+                    <div class="card shadow rounded bg-light">
                         <div class="card-header text-center bg-dark text-white">
                             <h4>Edit Student <?php echo $fullName ?></h4>
                             <?php echo $message ?>

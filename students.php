@@ -22,7 +22,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 						<span>Students</span>
 					</div>
                     <div class="card-body">
-                        <table class="table text-light table-striped table-hover table-dark table-responsive" style="font-size:12px;">
+                        <table class="table text-light table-striped table-hover table-dark" style="font-size:14px;">
                             <thead>
                                 <tr>
                                     <th scope="col">No.</th>
@@ -47,8 +47,8 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 									<td><?php echo $fetchEnrollmentRecords['created_at']; ?></td>
 									<td>
 										<a href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecords['no'] ?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-										<a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye text-white"></i></a>
-										<a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+										<a href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecords['no'] ?>" class="btn btn-info btn-sm"><i class="fa fa-eye text-white"></i></a>
+										<a href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecords['no'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 									</td>
                                 </tr>
 								<?php } ?>

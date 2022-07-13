@@ -1,6 +1,6 @@
 <?php
 
-require_once
+require_once('logics/connection.php');
 
 if( isset($_POST['updateEnrollment']))
 {
