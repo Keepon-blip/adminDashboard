@@ -29,13 +29,14 @@ while($fetchStudent = mysqli_fetch_array($sqlFetchEnrolledStudents))
                 <div class="col-lg-6">
                     <div class="card rounded-3 shadow">
                         <div class="card-header text-center bg-dark  text-light">
+                            <a href="students.php"><button class="btn btn-secondary float-start"><i class="fa fa-arrow-left float-start"></i></button></a>
                             <h4 class="card-title"><?php echo $fullName ?>'s Personal Info:</h4>
                         </div>
                         <div class="card-body">
                             <ul class="list-group">
                                 <li class="list-group-item">Full Name: <span class="float-end badge bg-primary"><?php echo $fullName ?></span></li>
-                                <li class="list-group-item">Email: <span class="float-end badge bg-secondary"><?php echo $email ?></span></li>
-                                <li class="list-group-item">Phone Number: <span class="float-end badge bg-danger"><?php echo $phone ?></span></li>
+                                <li class="list-group-item">Email: <span class="float-end badge bg-primary"><?php echo $email ?></span></li>
+                                <li class="list-group-item">Phone Number: <span class="float-end badge bg-primary"><?php echo $phone ?></span></li>
 
                             </ul>
                         </div>

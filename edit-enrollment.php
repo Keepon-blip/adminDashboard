@@ -32,6 +32,7 @@ require_once('logics/process-update.php');
                 <div class="col-lg-12">
                     <div class="card shadow rounded bg-light">
                         <div class="card-header text-center bg-dark text-white">
+                            <a href="students.php"><button class="btn btn-secondary float-start"><i class="fa fa-arrow-left float-start"></i></button></a>
                             <h4>Edit Student <?php echo $fullName ?></h4>
                             <?php echo $message ?>
                         </div>
@@ -41,21 +42,21 @@ require_once('logics/process-update.php');
                                     <div class="row">
                                         <div class="mb-3 col-lg-6">
                                             <label for="fullname" class="form-label" na><b>Full Name</b></label>
-                                            <input type="text" name="fullname" class="form-control" placeholder="Enter Your Full Name" value="<?php echo $fullName ?>">
+                                            <input type="text" name="fullname" class="form-control shadow" placeholder="Enter Your Full Name" value="<?php echo $fullName ?>">
                                         </div>
                                         <div class="mb-3 col-lg-6">
                                             <label for="phonenumber" class="form-label"><b>Phone Number</b></label>
-                                            <input type="tel" name="phonenumber" class="form-control" placeholder="+2547..." value="<?php echo $phone ?>">
+                                            <input type="tel" name="phonenumber" class="form-control shadow" placeholder="+2547..." value="<?php echo $phone ?>">
                                         </div>
                                     </div> 
                                     <div class="row">
                                         <div class="mb-3 col-lg-6">
                                             <label for="email" class="form-label"><b>E-mail Address</b></label>
-                                            <input type="email" name="email" class="form-control" placeholder="Please Enter Your E-mail" value="<?php echo $email ?>">
+                                            <input type="email" name="email" class="form-control shadow" placeholder="Please Enter Your E-mail" value="<?php echo $email ?>">
                                         </div>
                                         <div class="mb-3 col-lg-6">
                                             <label for="gender" class="form-label"><b>Gender</b></label>
-                                            <select class="form-select form-control mb-3" aria-label="" name="gender">
+                                            <select class="form-select form-control mb-3 shadow" aria-label="" name="gender">
                                                 <option selected><?php echo $gender ?></option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
@@ -64,7 +65,7 @@ require_once('logics/process-update.php');
                                     </div> 
                                     <div class="row">
                                         <label for="course" class="form-label"><b>Course</b></label>
-                                        <select class="form-select form-control mb-3" name="course">
+                                        <select class="form-select form-control mb-3 shadow" name="course">
                                             <option selected><?php echo $course ?></option>
                                             <option value="Web Design">Web Design</option>
                                             <option value="Data Science">Data Science</option>
@@ -74,7 +75,7 @@ require_once('logics/process-update.php');
                                         </select>
                                     </div>
                                     <br>
-                                    <button type="submit" class="btn btn-primary" name="updateEnrollment">Update Records</button>
+                                    <button type="submit" class="btn btn-primary shadow" name="updateEnrollment">Update Records</button>
                                 </form>
                             </div>
                         </div>  

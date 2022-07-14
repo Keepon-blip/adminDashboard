@@ -41,7 +41,7 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-folder-open fa-3x"></i></span>
-						<span class="float-right"><?php echo $countAllFemales ?></span>
+						<span class="float-right badge bg-dark"><?php echo $countAllFemales ?></span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -51,7 +51,7 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-graduation-cap fa-3x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right badge bg-dark">00</span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
@@ -61,7 +61,7 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-user fa-3x"></i></span>
-						<span class="float-right">00</span>
+						<span class="float-right badge bg-dark">00</span>
 					</div>
 					<div class="card-footer"></div>
 				</div>
