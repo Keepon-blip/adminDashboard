@@ -13,6 +13,12 @@
 						<span>Students</span>
 					</li>
 				</a>
+				<a href="contactus.php">
+					<li>
+						<span><i class="fa fa-envelope"></i></span>
+						<span>Messages</span>
+					</li>
+				</a>
 				<a href="">
 					<li>
 						<span><i class="fa fa-folder-open"></i></span>
