@@ -31,20 +31,27 @@ $queryContact = mysqli_query($conn, "SELECT * FROM contactus");
                                         <th>Phone Number</th>
                                         <th>Message</th>
                                         <th>Sent on...</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php while($fetchMessages = mysqli_fetch_array($queryContact)) {?>
+                                    <?php $count=1;
+                                    while($fetchMessages = mysqli_fetch_array($queryContact)) {?>
                                         <tr>
-                                            <th><?php echo $fetchMessages['no']; ?></th>
+                                            <th><?php echo $count ?></th>
                                             <td><?php echo $fetchMessages['firstname']; ?></td>
                                             <td><?php echo $fetchMessages['lastname']; ?></td>
                                             <td><?php echo $fetchMessages['email']; ?></td>
                                             <td><?php echo $fetchMessages['phonenumber']; ?></td>
                                             <td><?php echo $fetchMessages['message']; ?></td>
                                             <td><?php echo $fetchMessages['created_at']; ?></td>
+                                            <td>
+                                                <a href="edit-contact.php?id=<?php echo $fetchMessages['no'] ?>" class="btn btn-primary btn-sm text-white"><i class="fa fa-pencil"></i></a>
+                                                <a href="view-contact.php?id=<?php echo $fetchMessages['no'] ?>" class="btn btn-info btn-sm text-white"><i class="fa fa-eye"></i></a>
+                                                <a href="delete-contact.php?id=<?php echo $fetchMessages['no'] ?>" class="btn btn-danger btn-sm text-white"><i class="fa fa-trash"></i></a>
+                                            </td>
                                         </tr>
-                                    <?php } ?>
+                                    <?php $count++; } ?>
                                 </tbody>
                             </table>
                         </div>
