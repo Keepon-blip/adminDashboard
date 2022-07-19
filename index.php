@@ -5,7 +5,13 @@ $queryEnrolledStudents = mysqli_query($conn, "SELECT * FROM enrollment");
 $countAllStudents = mysqli_num_rows($queryEnrolledStudents);
 
 $queryEnrolledFemales = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='female' ");
-$countAllFemales = mysqli_num_rows($queryEnrolledFemales);
+$countFemales = mysqli_num_rows($queryEnrolledFemales);
+
+$queryEnrolledMales = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='male' ");
+$countMales = mysqli_num_rows($queryEnrolledMales);
+
+$queryEnrolledOther = mysqli_query($conn, "SELECT * FROM enrollment WHERE gender='other' ");
+$countOther = mysqli_num_rows($queryEnrolledOther);
 ?>
 
 <!DOCTYPE html>
@@ -21,55 +27,67 @@ $countAllFemales = mysqli_num_rows($queryEnrolledFemales);
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="card-header bg-dark text-white text-center shadow">
-						<span>Top content</span>
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center shadow">
+							<span>Top content</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center">
+							<span>Students</span>
+						</div>
+						<div class="card-body">
+							<span><i class="fa fa-group fa-3x"></i></span>
+							<span class="float-end badge bg-dark"><?php echo $countAllStudents ?></span>
+						</div>
 					</div>
 				</div>
 				<div class="col-lg-3">
-					<div class="card-header bg-dark text-white text-center">
-						<span>Students</span>
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center">
+							<span>Males</span>
+						</div>
+						<div class="card-body">
+							<span><i class="fa fa-folder-open fa-3x"></i></span>
+							<span class="float-end badge bg-dark"><?php echo $countMales ?></span>
+						</div>
 					</div>
-					<div class="card-body">
-						<span><i class="fa fa-group fa-3x"></i></span>
-						<span class="float-end badge bg-dark"><?php echo $countAllStudents ?></span>
-					</div>
-					<div class="card-footer"></div>
 				</div>
 				<div class="col-lg-3">
-					<div class="card-header bg-dark text-white text-center">
-						<span>Available Courses</span>
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center">
+							<span>Females</span>
+						</div>
+						<div class="card-body">
+							<span><i class="fa fa-graduation-cap fa-3x"></i></span>
+							<span class="float-end badge bg-dark"><?php echo $countFemales ?></span>
+						</div>
 					</div>
-					<div class="card-body">
-						<span><i class="fa fa-folder-open fa-3x"></i></span>
-						<span class="float-right badge bg-dark"><?php echo $countAllFemales ?></span>
-					</div>
-					<div class="card-footer"></div>
 				</div>
 				<div class="col-lg-3">
-					<div class="card-header bg-dark text-white text-center">
-						<span>Campuses</span>
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center">
+							<span>Other</span>
+						</div>
+						<div class="card-body">
+							<span><i class="fa fa-user fa-3x"></i></span>
+							<span class="float-end badge bg-dark"><?php echo $countOther ?></span>
+						</div>
 					</div>
-					<div class="card-body">
-						<span><i class="fa fa-graduation-cap fa-3x"></i></span>
-						<span class="float-right badge bg-dark">00</span>
-					</div>
-					<div class="card-footer"></div>
 				</div>
-				<div class="col-lg-3">
-					<div class="card-header bg-dark text-white text-center">
-						<span>Users</span>
-					</div>
-					<div class="card-body">
-						<span><i class="fa fa-user fa-3x"></i></span>
-						<span class="float-right badge bg-dark">00</span>
-					</div>
-					<div class="card-footer"></div>
-				</div>
+			</div>
+			<div class="row">
 				<div class="col-lg-12">
-					<div class="card-header bg-dark text-white text-center">
-						<span>Student Analysis</span>
+					<div class="card">
+						<div class="card-header bg-dark text-white text-center">
+							<span>Student Analysis</span>
+						</div>
+						<span class="fa fa-line-chart fa-3x"></span>
 					</div>
-					<span class="fa fa-line-chart fa-3x"></span>
 				</div>
 			</div>
 		</div>
