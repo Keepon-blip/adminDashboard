@@ -26,37 +26,37 @@ require_once('logics/process-contact.php');
   
     <div class="main-content">
         <div class="container">
-            <div class="card">
-                <div class="card-header bg-dark text-white text-center"><h4>Edit Contact</h4><?php echo $messageSuccess ?></div>
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white text-center"><a href="contactus.php"><button class="btn btn-secondary float-start"><i class="fa fa-arrow-left float-start"></i></button></a><h4>Edit Contact</h4><?php echo $messageSuccess ?></div>
                 <div class="card-body">
-                    <form action="edit-contact.php?=<?php echo $id ?>" method="POST">
+                    <form action="edit-contact.php?id=<?php echo $id ?>" method="POST">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <label for="firstname" class="form-label">First Name</label>
-                                <input type="text" name="firstname" class="form-control" placeholder="First Name..." value="<?php echo $firstName ?>">
+                            <div class="mb-3 col-lg-6">
+                                <label for="firstname" class="form-label"><b>First Name</b></label>
+                                <input type="text" name="firstname" class="form-control shadow" placeholder="First Name..." value="<?php echo $firstName ?>">
                             </div>
-                            <div class="col-lg-6">
-                                <label for="lastname" class="form-label">Last Name</label>
-                                <input type="text" name="lastname" class="form-control" placeholder="Last Name..." value="<?php echo $lastName ?>">
+                            <div class="mb-3 col-lg-6">
+                                <label for="lastname" class="form-label"><b>Last Name</b></label>
+                                <input type="text" name="lastname" class="form-control shadow" placeholder="Last Name..." value="<?php echo $lastName ?>">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" placeholder="Email..." value="<?php echo $email ?>">
+                            <div class="mb-3 col-lg-6">
+                                <label for="email" class="form-label"><b>Email</b></label>
+                                <input type="email" name="email" class="form-control shadow" placeholder="Email..." value="<?php echo $email ?>">
                             </div>
-                            <div class="col-lg-6">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" name="phonenumber" class="form-control" placeholder="Phone Number..." value="<?php echo $phone ?>">
+                            <div class="mb-3 col-lg-6">
+                                <label for="phone" class="form-label"><b>Phone Number</b></label>
+                                <input type="tel" name="phonenumber" class="form-control shadow" placeholder="Phone Number..." value="<?php echo $phone ?>">
                             </div>
                         </div>
                         <div class="row mb-4">
                             <div class="col-lg-12">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea name="message" cols="30" rows="10" class="form-control"><?php echo $message ?></textarea>
+                                <label for="message" class="form-label"><b>Message</label>
+                                <textarea name="message" cols="30" rows="10" class="form-control shadow text-break"><?php echo $message ?></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary" name="editContact">Save Changes</button>
+                        <button type="submit" class="btn btn-primary shadow mb-3" name="editContact">Save Changes</button>
                     </form>
                 </div>
             </div>

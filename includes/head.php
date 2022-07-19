@@ -1,6 +1,7 @@
 <head>
 	<title>Bootstrap Admin Template</title>
 	<meta charset="UTF-8">
+	<!-- <meta http-equiv="refresh" content="30"> -->
 	<meta name="description" content="Creating admin dashboard">
 	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
 	<meta name="author" content="Your name">

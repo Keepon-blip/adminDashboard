@@ -15,7 +15,6 @@ if( isset($_POST['updateEnrollment']))
     if($updateRecords)
     {
         $message = "Records updated successfully!";
-        header('location: students.php');
     }
     else
     {
