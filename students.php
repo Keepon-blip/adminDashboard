@@ -29,7 +29,7 @@ $sql = mysqli_query($conn, "SELECT * FROM enrollment");
 									<div class="modal-content">
 										<div class="modal-header bg-dark text-white float-center">
 											<h5 class="modal-title" id="addModalLabel">Add Student</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											<button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-close"></i></button>
 										</div>
 										<div class="modal-body">
 											<form action="students.php" method="POST">
